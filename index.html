@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,26 +9,41 @@
     <style>
         :root {
             --verde-pino: #25352E;
-            --grafito: #252525;
+            --grafito: #1f2a24;
             --arena-luminosa: #E9E2D6;
             --plata-mineral: #B8B881;
             --blanco-pura: #FFFFFF;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Manrope', sans-serif; background-color: var(--verde-pino); color: var(--blanco-pura); line-height: 1.6; }
-        header { background-color: rgba(37, 53, 46, 0.95); backdrop-filter: blur(10px); padding: 1.5rem 2rem; position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(184, 184, 129, 0.2); }
-        .logo-container img { height: 60px; width: auto; display: block; }
+        
+        header { background-color: rgba(37, 53, 46, 0.95); backdrop-filter: blur(10px); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(184, 184, 129, 0.2); }
+        .logo-container img { height: 50px; width: auto; display: block; }
         nav a { color: var(--arena-luminosa); text-decoration: none; margin-left: 1.5rem; font-weight: 500; transition: color 0.3s ease; }
         nav a:hover { color: var(--blanco-pura); }
-        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3rem 1rem; background: radial-gradient(circle at center, rgba(37, 53, 46, 0.9) 0%, rgba(15, 23, 20, 0.98) 100%); }
-        .hero img { max-width: 550px; width: 100%; height: auto; margin-bottom: 2rem; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); }
-        .hero h1 { font-size: 2.2rem; font-weight: 600; color: var(--arena-luminosa); margin-bottom: 1rem; }
+
+        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 4rem 1rem; background: radial-gradient(circle at center, rgba(37, 53, 46, 0.9) 0%, rgba(15, 23, 20, 0.98) 100%); }
+        .hero img { max-width: 450px; width: 100%; height: auto; margin-bottom: 2rem; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); border-radius: 8px; }
+        .hero h1 { font-size: 2.2rem; font-weight: 600; color: var(--arena-luminosa); margin-bottom: 1rem; max-width: 800px; }
         .hero p { font-size: 1.15rem; font-weight: 300; max-width: 700px; color: #d1d5db; margin-bottom: 2rem; }
-        
-        .section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
-        .section h2 { text-align: center; color: var(--arena-luminosa); font-size: 2rem; margin-bottom: 2rem; }
-        
-        /* Test Interactivo */
+
+        .section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
+        .section h2 { text-align: center; color: var(--arena-luminosa); font-size: 2rem; margin-bottom: 1.5rem; }
+        .subtitle { text-align: center; color: #d1d5db; margin-bottom: 3rem; font-size: 1.1rem; }
+
+        .metric-banner { background: rgba(15, 23, 20, 0.7); border: 1px solid rgba(184, 184, 129, 0.3); border-radius: 8px; padding: 1rem 2rem; margin: 2rem auto; text-align: center; color: var(--arena-luminosa); max-width: 600px; }
+
+        .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .pilar-card { background: rgba(25, 35, 30, 0.8); border: 1px solid rgba(184, 184, 129, 0.3); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .pilar-card h3 { color: var(--arena-luminosa); font-size: 1.3rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(184, 184, 129, 0.2); padding-bottom: 0.5rem; }
+        .pilar-card p { color: #d1d5db; font-size: 0.95rem; }
+
+        .metodologia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .paso-card { background: rgba(15, 23, 20, 0.6); border-left: 3px solid var(--arena-luminosa); padding: 1.5rem; border-radius: 4px; }
+        .paso-card .paso-num { color: var(--plata-mineral); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; display: block; }
+        .paso-card h4 { color: var(--arena-luminosa); margin-bottom: 0.5rem; }
+        .paso-card p { color: #d1d5db; font-size: 0.88rem; }
+
         .test-container { background: rgba(25, 35, 30, 0.8); border: 1px solid rgba(184, 184, 129, 0.3); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
         .question-step { display: none; }
         .question-step.active { display: block; }
@@ -35,11 +51,11 @@
         .options-grid { display: grid; gap: 1rem; margin-bottom: 1.5rem; }
         .option-btn { background: rgba(233, 226, 214, 0.1); border: 1px solid var(--arena-luminosa); color: var(--blanco-pura); padding: 0.9rem 1.2rem; border-radius: 8px; text-align: left; cursor: pointer; font-family: 'Manrope', sans-serif; font-size: 1rem; transition: all 0.2s ease; }
         .option-btn:hover { background: var(--arena-luminosa); color: var(--verde-pino); }
-        
+
         .btn { background-color: var(--arena-luminosa); color: var(--verde-pino); padding: 0.85rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(233, 226, 214, 0.2); }
         .btn:hover { background-color: var(--blanco-pura); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233, 226, 214, 0.3); }
 
-        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
         .social-links a { color: var(--arena-luminosa); text-decoration: none; font-weight: 500; border-bottom: 1px dashed var(--arena-luminosa); padding-bottom: 2px; }
         .social-links a:hover { color: var(--blanco-pura); }
 
@@ -51,32 +67,82 @@
 
     <header id="inicio">
         <div class="logo-container">
-            <img src="assets/images/logo.png" alt="TLY Soluciones Comerciales">
+            <img src="logo.jpg" alt="TLY Soluciones Comerciales">
         </div>
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#test">Test Comercial</a>
+            <a href="#servicios">Soluciones</a>
+            <a href="#metodologia">Metodología</a>
+            <a href="#test">Test Diagnóstico</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <section class="hero">
-        <img src="assets/images/logo.png" alt="TLY Logo Principal">
-        <h1>Conectamos Oportunidades, Creamos Resultados</h1>
-        <p>Sistemas de venta y organización comercial adaptados con elegancia, precisión y estrategia para hacer crecer tu negocio.</p>
-        <a href="#test" class="btn">Realizar Test Diagnóstico</a>
+        <img src="logo.jpg" alt="TLY Soluciones Comerciales Logo">
+        <h1>Sistemas de venta para pequeños negocios y autónomos</h1>
+        <p>El orden en tus ventas es el control de tu negocio. Diseñamos e implementamos la estructura comercial que necesitas para captar clientes, hacer seguimiento sistemático y cerrar ventas sin perder el control de tu tiempo.</p>
+        <div>
+            <a href="#test" class="btn">Organizar mi Área Comercial</a>
+            <a href="#metodologia" class="btn" style="background: transparent; color: var(--arena-luminosa); border: 1px solid var(--arena-luminosa); margin-left: 10px;">Ver Cómo Funciona</a>
+        </div>
+        
+        <div class="metric-banner">
+            <strong>Panel de Control Rápido:</strong> Oportunidades activas en seguimiento con un sistema limpio y sin fricción técnica.
+            <div style="margin-top: 5px; font-size: 0.9rem; color: var(--plata-mineral);">✓ 24 Negociaciones en curso | 32% Tasa de conversión</div>
+        </div>
     </section>
 
     <section id="servicios" class="section">
-        <h2>Nuestros Pilares</h2>
-        <p style="text-align: center; color: #d1d5db; margin-bottom: 2rem;">Diseñamos estructuras comerciales limpias para pequeños negocios y autónomos: centralización de clientes, seguimiento sistemático y control riguroso de conversión.</p>
+        <h2>Tres pilares para consolidar tu estructura comercial</h2>
+        <p class="subtitle">Sistemas de gestión y estructuración de ventas para pequeños negocios, profesionales independientes y PYMES.</p>
+        
+        <div class="pilares-grid">
+            <div class="pilar-card">
+                <h3>1. Clientes</h3>
+                <p>Elimina la dispersión de datos. Centraliza las oportunidades de negocio en una ficha única, clara y accesible, clasificando a cada prospecto según su potencial real.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>2. Seguimiento</h3>
+                <p>El seguimiento constante es la diferencia entre una venta cerrada y una oportunidad perdida. Establece alertas y mantén una trazabilidad exacta de cada oferta.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>3. Control</h3>
+                <p>Conoce con precisión tu volumen de ventas en negociación, la tasa de conversión y los ingresos proyectados mediante paneles limpios y directos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="section">
+        <h2>Metodología clara, de la desorganización a la previsibilidad</h2>
+        
+        <div class="metodologia-grid">
+            <div class="paso-card">
+                <span class="paso-num">PASO 01</span>
+                <h4>Diagnóstico</h4>
+                <p>Analizamos tu proceso de venta actual y detectamos los puntos de fuga de clientes.</p>
+            </div>
+            <div class="paso-card">
+                <span class="paso-num">PASO 02</span>
+                <h4>Configuración</h4>
+                <p>Construimos tus embudos y paneles adaptados 100% a tu operativa diaria.</p>
+            </div>
+            <div class="paso-card">
+                <span class="paso-num">PASO 03</span>
+                <h4>Puesta en marcha</h4>
+                <p>Capacitamos a tu equipo o a ti directamente eliminando cualquier fricción técnica.</p>
+            </div>
+            <div class="paso-card">
+                <span class="paso-num">PASO 04</span>
+                <h4>Optimización</h4>
+                <p>Revisamos métricas reales y ajustamos los flujos para garantizar autonomía.</p>
+            </div>
+        </div>
     </section>
 
     <section id="test" class="section">
-        <h2>Test Interactivo de Diagnóstico</h2>
+        <h2>Test Interactivo de Diagnóstico Comercial</h2>
         <div class="test-container">
-            <!-- Pregunta 1 -->
             <div class="question-step active" id="q1">
                 <h3>1. ¿Cómo gestionas actualmente el seguimiento de tus prospectos y clientes?</h3>
                 <div class="options-grid">
@@ -85,7 +151,6 @@
                     <button class="option-btn" onclick="answerQuestion(1, 3)">Utilizo un CRM o sistema automatizado.</button>
                 </div>
             </div>
-            <!-- Pregunta 2 -->
             <div class="question-step" id="q2">
                 <h3>2. ¿Con qué frecuencia se te escapan oportunidades por falta de tiempo o avisos?</h3>
                 <div class="options-grid">
@@ -94,7 +159,6 @@
                     <button class="option-btn" onclick="answerQuestion(2, 3)">Rara vez, tengo alertas y procesos estructurados.</button>
                 </div>
             </div>
-            <!-- Pregunta 3 -->
             <div class="question-step" id="q3">
                 <h3>3. ¿Conoces con precisión tu tasa de conversión y previsiones de ingresos mensuales?</h3>
                 <div class="options-grid">
@@ -103,7 +167,6 @@
                     <button class="option-btn" onclick="answerQuestion(3, 3)">Sí, cuento con paneles de control actualizados.</button>
                 </div>
             </div>
-            <!-- Pregunta 4 -->
             <div class="question-step" id="q4">
                 <h3>4. ¿Cuál es tu principal objetivo comercial a corto plazo?</h3>
                 <div class="options-grid">
@@ -112,7 +175,6 @@
                     <button class="option-btn" onclick="answerQuestion(4, 3)">Escalar y delegar la operativa comercial con autonomía.</button>
                 </div>
             </div>
-            <!-- Resultado -->
             <div class="question-step" id="result-step">
                 <h3>Resultado de tu Diagnóstico Comercial</h3>
                 <p id="result-text" style="margin-bottom: 1.5rem; color: var(--arena-luminosa); font-size: 1.1rem;"></p>
@@ -123,17 +185,17 @@
     </section>
 
     <section id="contacto" class="section" style="text-align: center;">
-        <h2>Contacto Directo</h2>
-        <p style="color: #d1d5db; margin-bottom: 1.5rem;">Conectemos oportunidades y llevemos tu negocio al siguiente nivel.</p>
+        <h2>¿Quieres estructurar tu área comercial y de RRHH?</h2>
+        <p style="color: #d1d5db; margin-bottom: 1.5rem;">Solicita tu Diagnóstico Comercial y de Gestión sin compromiso.</p>
         <div class="social-links">
-            <a href="https://wa.me/34651543152" target="_blank">WhatsApp: 651 543 152</a>
-            <a href="https://instagram.com/tlysolucionescomerciales" target="_blank">Instagram: @tlysolucionescomerciales</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://wa.me/34651543152" target="_blank">📱 WhatsApp: 651 543 152</a>
+            <a href="https://instagram.com/tlysolucionescomerciales" target="_blank">📷 Instagram: @tlysolucionescomerciales</a>
+            <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 TLY Soluciones Comerciales. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Organización Comercial - TLY Soluciones Comerciales. Todos los derechos reservados.</p>
         <p style="margin-top: 0.5rem;">
             <a href="privacidad.html">Política de Privacidad</a>
         </p>
@@ -144,9 +206,7 @@
 
         function answerQuestion(qNumber, weight) {
             scores['q' + qNumber] = weight;
-            
             document.getElementById('q' + qNumber).classList.remove('active');
-            
             let nextStep = qNumber + 1;
             if (document.getElementById('q' + nextStep)) {
                 document.getElementById('q' + nextStep).classList.add('active');
@@ -158,7 +218,6 @@
         function showResults() {
             document.getElementById('result-step').classList.add('active');
             let totalScore = (scores.q1 || 1) + (scores.q2 || 1) + (scores.q3 || 1) + (scores.q4 || 1);
-            
             let diagnosis = "";
             let recommendation = "";
 
