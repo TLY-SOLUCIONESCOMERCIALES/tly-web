@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLY Soluciones Comerciales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-pino: #25352E;
+            --grafito: #252525;
+            --arena-luminosa: #E9E2D6;
+            --plata-mineral: #B8B881;
+            --blanco-pura: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--verde-pino);
+            color: var(--blanco-pura);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(37, 53, 46, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(184, 184, 129, 0.2);
+        }
+
+        .logo-container img {
+            height: 70px;
+            width: auto;
+            display: block;
+        }
+
+        nav a {
+            color: var(--arena-luminosa);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--blanco-pura);
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: radial-gradient(circle at center, rgba(37, 53, 46, 0.8) 0%, rgba(15, 23, 20, 0.95) 100%);
+        }
+
+        .hero img {
+            max-width: 650px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--arena-luminosa);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            max-width: 700px;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--arena-luminosa);
+            color: var(--verde-pino);
+            padding: 0.85rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 226, 214, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--blanco-pura);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 226, 214, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a2520;
+            border-top: 1px solid rgba(184, 184, 129, 0.1);
+            font-size: 0.9rem;
+            color: var(--arena-luminosa);
+        }
+    </style>
+</head>
+<body>
+
+    <header id="inicio">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="TLY Soluciones Comerciales">
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="assets/images/logo.png" alt="TLY Logo Principal">
+        <h1>Conectamos Oportunidades, Creamos Resultados</h1>
+        <p>Soluciones comerciales adaptadas con elegancia, precisión y estrategia para hacer crecer tu negocio.</p>
+        <a href="#contacto" class="btn">Descubre cómo te ayudamos</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TLY Soluciones Comerciales. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
